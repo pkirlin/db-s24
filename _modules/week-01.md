@@ -19,3 +19,6 @@ Wed, Jan 24
 : **Relational algebra**  
   [Handout](lectures/rel-alg/relational-algebra-handout.pdf) | [Whiteboard](lectures/rel-alg/day1-whiteboard.pdf) | [Recording](https://rhodes.box.com/s/fkeaczh7lhqnjbqwbrufdv6ndor2enlc)
 
+Mon, Jan 29
+: **Relational algebra, continued**
+: **Project**{: .label .label-proj} [Milestone 1](project/milestone1), due Wed, Feb 7
