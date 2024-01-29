@@ -1,0 +1,127 @@
+--setup
+
+create table bank(acct int, bal int);
+
+insert into bank values(101, 10);
+insert into bank values(102, 20);
+insert into bank values(103, 30);
+insert into bank values(104, 40);
+
+-- demonstrate a transaction committing
+
+begin transaction;
+
+update bank set bal=bal+1 where acct=101;
+update bank set bal=bal-1 where acct=102;
+
+commit;
+
+-- demonstrate a transaction rolling back
+
+begin transaction;
+
+update bank set bal=bal+1 where acct=101;
+update bank set bal=bal-1 where acct=102;
+
+rollback;
+
+-- demonstrate a constraint violation
+
+drop table bank;
+create table bank(acct int, bal int check (bal >= 0));
+
+insert into bank values(101, 10);
+insert into bank values(102, 20);
+insert into bank values(103, 30);
+insert into bank values(104, 40);
+
+begin transaction;
+
+update bank set bal=bal+200 where acct=101;
+update bank set bal=bal-200 where acct=102;
+
+commit; 
+
+
+DEMONSTRATION OF DIRTY READ PREVENTION:
+
+t1																					t2
+
+begin transaction;
+set transaction isolation level read committed;
+
+																						begin transaction;
+																						set transaction isolation level read committed;
+
+select * from bank;
+
+																						select * from bank;
+
+update bank set bal=bal+1 where acct=101;
+select * from bank;
+
+																						select * from bank; 
+																						(notice how we get the old value of acct 101,
+																						prevented dirty read)
+																						
+																						update bank set bal=bal+1 where acct=101;
+																						(notice how DB hangs b/c we can't do this 
+																						until we know how the 1st xact finishes)
+commit;																					
+																						
+																						commit;
+						
+																					
+DEMO OF NON-REPEATABLE READ ALLOWED
+
+t1																					t2
+
+begin transaction;
+set transaction isolation level read committed;
+
+																						begin transaction;
+																						set transaction isolation level read committed;
+
+select * from bank;
+
+																						select * from bank;
+
+update bank set bal=bal+1 where acct=101;
+select * from bank;
+
+																						select * from bank;
+																						(notice how we get the old value of acct 101,
+																						prevented dirty read)
+																						
+commit;																					
+																						select * from bank;
+																						(we get the NEW version, non-repeat read allowed)
+																						
+																						commit;
+																						
+DEMO OF NON-REPEATABLE READ PREVENTED
+
+t1																					t2
+
+begin transaction;
+set transaction isolation level repeatable read;
+
+																						begin transaction;
+																						set transaction isolation level repeatable read;
+
+select * from bank;
+
+																						select * from bank;
+
+update bank set bal=bal+1 where acct=101;
+select * from bank;
+
+																						select * from bank;
+																						(notice how we get the old value of acct 101,
+																						prevented dirty read)
+																						
+commit;																					
+																						select * from bank;
+																						(we get the OLD version, non-repeat read prevented)
+																						
+																						commit;

@@ -1,0 +1,107 @@
+; Basic tables
+
+create table artists (
+  artistid int,
+  name varchar(50),
+  dob date
+);
+        
+create table songs (
+  songid int,
+  title varchar(50),
+  artistid int
+);
+
+;INSERT INTO BASIC TABLES
+
+insert into artists values (1, 'Lil Nas X', '4/9/1999');
+insert into artists values (2, 'Justin Bieber', '3/1/1994');
+insert into artists values (3, 'Lady Gaga', '3/28/1986');
+insert into artists values (4, 'Ariana Grande', '6/26/1993');
+
+insert into songs values (101, 'Old Town Road', 1);
+insert into songs values (102, 'Panini', 1);
+insert into songs values (103, 'Baby', 2);
+insert into songs values (104, 'Love Yourself', 2);
+insert into songs values (105, 'Born This Way', 3);
+insert into songs values (106, 'The Edge of Glory', 3);
+insert into songs values (107, '7 Rings', 4);
+insert into songs values (108, 'Break Free', 4);
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Now let's add primary keys
+
+drop table if exists artists;
+drop table if exists songs;
+
+create table artists (
+  artistid int primary key,
+  name varchar(50),
+  dob date
+);
+        
+create table songs (
+  songid int primary key,
+  title varchar(50),
+  artistid int
+);
+
+insert into artists values (1, 'Lil Nas X', '4/9/1999');
+insert into artists values (2, 'Justin Bieber', '3/1/1994');
+insert into artists values (3, 'Lady Gaga', '3/28/1986');
+insert into artists values (4, 'Ariana Grande', '6/26/1993');
+
+insert into songs values (101, 'Old Town Road', 1);
+insert into songs values (102, 'Panini', 1);
+insert into songs values (103, 'Baby', 2);
+insert into songs values (104, 'Love Yourself', 2);
+insert into songs values (105, 'Born This Way', 3);
+insert into songs values (106, 'The Edge of Glory', 3);
+insert into songs values (107, '7 Rings', 4);
+insert into songs values (108, 'Break Free', 4);
+
+; Try to add a duplicate entry (songid 107 is already taken)
+
+insert into songs values (107, 'FAKE SONG', 400);
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Now add foreign keys
+
+drop table if exists artists;
+drop table if exists songs;
+
+create table artists (
+  artistid int primary key,
+  name varchar(50),
+  dob date
+);
+        
+create table songs (
+  songid int primary key,
+  title varchar(50),
+  artistid int references artists(artistid)
+);
+
+insert into artists values (1, 'Lil Nas X', '4/9/1999');
+insert into artists values (2, 'Justin Bieber', '3/1/1994');
+insert into artists values (3, 'Lady Gaga', '3/28/1986');
+insert into artists values (4, 'Ariana Grande', '6/26/1993');
+
+insert into songs values (101, 'Old Town Road', 1);
+insert into songs values (102, 'Panini', 1);
+insert into songs values (103, 'Baby', 2);
+insert into songs values (104, 'Love Yourself', 2);
+insert into songs values (105, 'Born This Way', 3);
+insert into songs values (106, 'The Edge of Glory', 3);
+insert into songs values (107, '7 Rings', 4);
+insert into songs values (108, 'Break Free', 4);
+
+; Try to add a song with a non-existent artist
+
+insert into songs values (109, 'FAKE SONG', 400);
+
+; Try to delete an artist with songs in the DB
+
+delete from artists where name='Justin Bieber';

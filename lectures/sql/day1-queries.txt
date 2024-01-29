@@ -1,0 +1,42 @@
+--Find all Slytherin students with owls.
+--select slast, sfirst from students where pet='Owl' and 
+--house='Slytherin'
+
+--Find all years where History of Magic was taught before noon.
+--select * from courses where name='History of Magic' and
+--starttime < 12
+
+--Find all professors with a hyphen in their last name.
+--select * from profs where plast like '%-%'
+
+--Find all rooms with at least ten seats.
+--select * from rooms where maxseats >= 10
+
+--Find last names of all students who have ever failed a class.
+--select distinct slast from grades where grade=0 order by slast desc
+
+
+
+--Partner up all the Gryffindors and the Slytherins
+--select s1.slast, s1.sfirst, s2.slast, s2.sfirst 
+--from students s1, students s2
+--where s1.house='Gryffindor' and s2.house='Slytherin'
+
+--select students.slast, sfirst, crn, grade
+--from grades join students on grades.slast=students.slast
+
+--Write a query to retrieve a list of all courses with
+--professor first & last names. (Table should have CRN, coursename,
+--prof first name, prof last name)
+--select crn, name, profs.plast, pfirst
+--from courses join profs on courses.plast=profs.plast
+
+--select students.sfirst, students.slast, grades.crn, 
+--courses.name, grades.grade
+--from grades join courses on grades.crn=courses.crn
+--join students on students.slast=grades.slast
+
+select sfirst, slast, crn, name, grade
+from courses natural join grades natural join students
+
+

@@ -1,0 +1,38 @@
+--select * from courses c1, courses c2
+--where c1.room = c2.room and c1.starttime = c2.starttime
+--      and c1.year = c2.year
+--	  and c1.crn < c2.crn
+
+--select * from grades natural join students
+--         natural join courses join  heads
+--		 on heads.house=students.house
+--		 where courses.plast != heads.plast
+
+--select slast from grades where crn=1
+--except
+--select slast from grades where crn=2
+
+--select distinct plast from profs (vs courses)
+--except 
+--select distinct plast from courses where starttime=9
+
+--select * from courses where starttime!=9
+
+--select * from courses natural join rooms
+--where maxseats >= 10
+
+--select c1.year,c2.year,c1.plast,c2.plast,c1.name,c2.name from courses c1, courses c2 
+--  where c1.year != c2.year
+--  and c1.plast = c2.plast
+
+-- Want to find the name of the head of Padma Patil's house?
+
+--select * from students where slast='Patil'
+
+--select plast from heads where house='Ravenclaw'
+
+--select plast from heads where house=
+--  (select house from students where slast='Patil')
+
+select * from students natural join heads
+where slast='Patil'

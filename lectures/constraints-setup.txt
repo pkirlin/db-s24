@@ -1,0 +1,64 @@
+COMPLETE EXAMPLE FROM START TO FINISH.
+
+Suppose we want to create a music database.  We have ARTISTS who have a name and a 
+birthdate, and SONGS, which are performed by artists, and have titles.  Assume each
+SONG is performed by only one ARTIST.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+E/R Diagram:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Convert to relations:
+
+
+
+
+
+
+
+
+
+
+
+
