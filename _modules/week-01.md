@@ -30,3 +30,4 @@ Wed, Jan 31
 : **SQL**
 : **Homework**{: .label .label-hw} [Homework 1](homework/hw1/hw1.pdf), due Mon, Feb 5
 : **Reading**{: .label .label-reading} FCDS 6.2
+
