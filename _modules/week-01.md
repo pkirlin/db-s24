@@ -25,3 +25,7 @@ Wed, <nobr>Jan 24
 Mon, Jan 29
 : **Relational algebra, continued**
 : **Project**{: .label .label-proj} [Milestone 1](project/milestone1), due Wed, Feb 7
+
+Wed, Jan 31
+: **SQL**
+: **Homework**{: .label .label-hw} [Homework 1](homework/hw1/hw1.pdf), due Mon, Feb 5

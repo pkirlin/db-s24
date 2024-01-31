@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage,amsmath,amssymb,enumitem}
+
+\begin{document}
+
+
+{\Large{\noindent Databases Homework 4}}
+
+\begin{enumerate}
+	\item Below are two relations.  Each relation has a corresponding set of FDs that
+	hold in the relation.
+	For each relation and corresponding  FDs, answer these three questions:
+	
+	\begin{enumerate}[label=(\roman*)]
+		\item What are all the nontrivial FDs that follow from the given FDs?  List each FD with
+		a single attribute on the right side.
+		\item What are the keys of the relation?
+		\item What are the superkeys for the relation that are not keys?
+	\end{enumerate}
+	
+	Schemas and FDs:
+	
+	\begin{enumerate}
+		\item $R(A, B, C, D)$ with FDs $C \to B$, $C \to A$, and $AB \to D$.
+		\item $R(A, B, C, D)$ with FDs $AB \to C$, $C \to D$, and $D \to B$.
+		%\item $R(A, B, C, D, E, F)$ with FDs $E \to F$, $E \to D$, $AD \to B$, $AD \to C$, and $F \to B$.
+
+	\end{enumerate}
+	
+	\item For all the parts of this question, only write FDs which are completely nontrivial and which have single
+	attributes on the right side.  Also, in each question, you only need to provide a minimal basis of FDs (though if you
+	give extras, that's OK).
+	
+	\begin{enumerate}
+		\item Suppose we have a relation PizzaOrders(customerId, customerName, pizzaId, pizzaName, orderTime, quantity, 
+		slices) which has the following FDs:
+		
+		customerId $\to$ customerName \\
+		pizzaId $\to$ pizzaName \\
+		customerId orderTime pizzaId  $\to$ quantity slices
+		
+		Project these FDs onto the relation $X$(customerId, customerName, quantity, orderTime).
+		
+		\emph{In other words, suppose relation $X = \pi_\text{customerId, customerName, quantity, orderTime}(\text{PizzaOrders})$. 
+		Determine a minimal basis of FDs that hold in $X$}.
+		
+		\item Suppose we have a relation TakeCourses(studentId, studentName, profId, profName, courseNumber, department, capacity)
+		which has the following FDs:
+		
+		studentId $\to$ studentName \\
+		profId $\to$ profName \\
+		courseNumber department $\to$ profId capacity
+		
+		Project these FDs onto the relation $Y$(profName, studentName, courseNumber, department).
+		
+		\item Suppose we have a relation $R(A, B, C, D, E, F)$ which has the following FDs:
+		
+		$B \to A$, $E \to C$, $F \to D$, $CD \to B$, $CF \to A$.
+		
+		Project these FDs onto the relation $Z(A, E, F)$.
+	\end{enumerate}
+
+\item Consider the relation $R(A, B, C, D, E)$ with FDs $C\to AD$, $DE \to B$, $A \to E$,
+	and $B \to C$.
+	\begin{enumerate}
+		\item List all the keys of $R$.
+		\item Indicate which FDs are BCNF violations.
+		\item Decompose R, if necessary, into relations that are in BCNF.  You can choose
+		any BCNF violations you want to do the decomposition.  Show your work.
+		\item Is the result of your decomposition dependency-preserving?  In other words,
+		is the set of FDs that hold in the individual relations in your decomposition equivalent
+		to the original set of FDs in R?  Explain your answer.  If your decomposition is
+		not dependency-preserving, re-decompose R into 3NF.  Show your work.
+		
+	\end{enumerate}
+	
+	\item Consider a relation Stocks$(B, O, I, S, Q, D)$, whose attributes may be thought of informally as broker, office (of the broker), investor, stock, quantity (of the stock owned by the investor), and dividend (of the stock). Let the set of FDs for Stocks be $S \to D$, 
+	$I \to B$, $IS \to Q$, and $B \to O$.
+	
+	\begin{enumerate}
+		\item List all the keys for Stocks.
+		\item Use the 3NF synthesis algorithm to find a lossless-join, dependency-preserving decomposition of Stocks into a set of 3NF relations. Show your work.
+		\item Are any of the relations in your final decomposition not in BCNF?  If yes, decompose them into BCNF.
+	\end{enumerate}
+	
+	\item Consider the following relation (similar to the movie database in the textbook):
+
+StarringMovie(actorName, actorAddress, studioName, studioAddress, title, year, budget, role, wage)
+
+Consider the following constraints for this relation: 
+
+Constraint 1:	Every actor has a unique name and address. 
+
+Constraint 2:	Every studio has a unique name and  address. 
+
+Constraint 3:	Every movie has a release year, budget and a unique movie name, and it is owned by only one studio. 
+
+Constraint 4:	An actor can play multiple \emph{different} roles in the same movie. For example, an actor can play the roles of ``Teacher'' and ``Policeman,'' but cannot play two ``Students'' in a movie.  Multiple actors can play the same role in the same movie (so it is possible that there may be many actors playing the role of ``Student'' in a movie.). 
+
+Constraint 5:	If multiple actors play the same role in the same movie, they must all get the same wage. For example, all ``Students'' in the same movie should get the same daily wage.  Note that if someone plays a ``Student'' in two different movies, they may get different daily wages for each of those jobs. Also, if different actors play different roles in the same movie, they may get different wages, e.g., someone playing a ``Teacher'' may get more or less money than someone playing a ``Student'' in the same movie.  Someone
+playing multiple roles in the same movie will have multiple wages listed, one for each role.
+
+\begin{enumerate}
+\item Based on the statements, list all the non-trivial functional dependencies for this schema.  For each FD you write, list the statement number(s) from which you derived that FD.
+A minimal basis of FDs is fine.
+
+
+\item Is StarringMovie in BCNF?  If not, convert it to BCNF.  Show your work.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

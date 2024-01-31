@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>Database Homework #2, Spring 2014</title>
+</head>
+
+<body>
+<h1>Database Homework #2, Spring 2014</h1>
+
+<P>
+
+For each question below (most anyway), you will write an SQL query.  
+Additionally, for each question with a star (*), provide the SQLite output (the table that is printed).
+<P>
+Each  of these questions should be answered with  a <i>single</i> SQL query that would 
+hypothetically work for any logical database instance.  In other words, you shouldn't 
+"hard-code" anything in a query that will make the query return incorrect information 
+if the any tuples in the database change.
+
+<ol>
+	<li>(Easy SQL)  Using SQLite, load the <a href="../../sqlite/netflix1.db">netflix1.db</a> database.  
+	It has a table called "recommendation" with records of Netflix customers and how they rated movies.  
+	A rating is from 1-5 (1 for "I hate it!" to 5 for "I love it!").
+	
+	<ol type=a>
+		<li>*Return all movies with a rating of 5 from at least one reviewer.
+		<li>*Return all the reviewers who rated <I>Fight Club</i>.
+	</ol>
+	<P>
+	<li>(Creating tables, importing data, and easy SQL)
+	
+	<ol type=a>
+		<li>Using SQLite, load the <a href="../../sqlite/movie_ratings.csv">movie_ratings.csv</a> file into a database.  
+		Consult the <A href="https://www.sqlite.org/cvstrac/wiki?p=ImportingFiles">SQLite documentation</a> for how to do this.  
+		You will need to write a CREATE TABLE statement and then import the data.   Provide your CREATE TABLE statement for
+		this problem.  Don't worry about constraints like primary keys; just choose appropriate data types.
+		<li>Find the number of reviews where the rating is 5. 
+		<li>Find the number of reviewers who gave a rating of 1 to <i>Gone with the wind</i>. 
+
+	</ol>
+	<P>
+	<li>(Medium SQL)
+	Consider the following relational design used at a Memphis pizza restaurant:
+	<ul>
+		<li>Customer (cust_id, name, phone, ccn, neighborhood) 
+		<li>Pizza (pizza_id, name, size, price) 
+		<li>Order (cust_id, pizza_id, ordermonth, orderday, orderyear, ordertime, quantity)
+		<li>Supplies (supply_name, amountleft, unitprice)
+		<li>Ingredient (pizza_id, supply_name, amount) 
+	</ul>
+	<P>
+The Customer table maintains the personal information for people who order pizzas, such as a unique ID, name, 
+phone number, credit card number (ccn), and neighborhood (e.g., Midtown, East Memphis, Evergreen). 
+It is possible that two different people have the same name. 
+<P>
+ In the Pizza table, every pizza has an ID, name (e.g., "the works"), particular size (e.g., 7 
+inches) and price. Note that different pizzas may have the 
+same name, but different sizes. 
+<P>
+The Order table includes the records about which customer ordered which pizza, 
+quantity of pizzas, orderyear (e.g., 2014), ordermonth (e.g., 12), orderday (e.g., 27), 
+and the order time (e.g., "6:13pm"). Note that an order can contain more than one pizza;
+there will just be multiple tuples with the same cust_id, date, and time.
+<P>
+The Supplies table includes the information of the various groceries used by the store: 
+the name, unit price, and the amount left in the store (e.g. the store might have 3 lbs of 
+mozzarella left with a unit price of $5 per lb). 
+<P>
+The Ingredient table keeps the records about the amount of ingredients used by each 
+pizza (so "The works 7 inch" might use only 0.1 lbs of mozzarella, while "Four cheese 
+12 inch" might use 0.4 lbs). 
+<P>
+Write SQL queries to answer the following questions.  Use only the operators and SQL statements we have learnt in class. In 
+addition, avoid the operators IN, ALL, ANY, and EXISTS. 
+ 
+<ol type=a>
+	<li>What are good primary keys for the five tables? 
+	<li>Find the ids of the customers with name "Bob."
+	<li>List pizza ids of the pizzas ordered by all the customers.  Remove duplicates.
+	<li>Find pizza ids of all the pizzas with the price more than 15 dollars.  
+	<li>List ids and names of the customers who ordered at least one pizza and live in Midtown. 
+	<li>Find all the pizzas (pizza id, pizza name, and size) where the store 
+makes a profit of at least 10 dollars per whole pizza. (Here, we assume Profit 
+= Pizza Price Ð Ingredient Cost) 
+</ol>
+
+	<P>
+	<li>(Advanced SQL) Using the <a href="../../sqlite/potter2.db">potter2.db</a> SQLite database (note: not the original potter.db database!), write SQL queries to answer the following questions.  
+	<ol type=a>
+		<li>Find a listing of all courses (specific CRNs) with how many students are enrolled in each CRN.
+		<li>*Find the largest number of students in any one CRN.  In other words, find the size of the biggest class.
+		<li>*Find the courses (specific CRNs) with the largest number of students. Return the CRN, course name, year, and number of students.  Hint: there are four of these courses.
+		<li>*Find, for each of the four houses, the most popular course title (not CRN) within that house.  In other words, you want to find the course title, that across all CRNs with that course title, have the largest student enrollment for each house.  Return a table consisting of the house, the course title, and the number of students enrolled in that CRN from that house.
+		<P>Hint: this is hard.  Plan your query out in a text editor so you can move the pieces around and rewrite it as you construct it.  
+		Read the book section on correlated subqueries.  <a href="http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/">This may be helpful as well.</a>
+		<P>Hint 2: As it turns out, the four houses all have the same most popular course title.
+	</ol>
+</ol>
+
+</body>
+</html>
