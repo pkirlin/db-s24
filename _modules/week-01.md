@@ -19,8 +19,8 @@ Mon, Jan 22
 
 Wed, <nobr>Jan 24
 : **Relational algebra**  
-  [Handout](lectures/rel-alg/relational-algebra-handout.pdf) | [Whiteboard](lectures/rel-alg/day1-whiteboard.pdf) | 
-[Recording](https://rhodes.box.com/s/fkeaczh7lhqnjbqwbrufdv6ndor2enlc) | [Slides](lectures/rel-alg/db-relalg-slides.pdf)
+  [Slides](lectures/rel-alg/db-relalg-slides.pdf) | [Handout](lectures/rel-alg/relational-algebra-handout.pdf) | [Whiteboard](lectures/rel-alg/day1-whiteboard.pdf) | 
+[Recording](https://rhodes.box.com/s/fkeaczh7lhqnjbqwbrufdv6ndor2enlc) 
 : **Reading**{: .label .label-reading} FCDS 2.4
 
 Mon, Jan 29
