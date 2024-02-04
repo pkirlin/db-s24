@@ -19,15 +19,16 @@ Mon, Jan 22
 
 Wed, <nobr>Jan 24
 : **Relational algebra**  
-  [Handout](lectures/rel-alg/relational-algebra-handout.pdf) | [Whiteboard](lectures/rel-alg/day1-whiteboard.pdf) | [Recording](https://rhodes.box.com/s/fkeaczh7lhqnjbqwbrufdv6ndor2enlc)
-: **Reading**{: .label .label-reading} FCDS 6.1
+  [Handout](lectures/rel-alg/relational-algebra-handout.pdf) | [Whiteboard](lectures/rel-alg/day1-whiteboard.pdf) | 
+[Recording](https://rhodes.box.com/s/fkeaczh7lhqnjbqwbrufdv6ndor2enlc) | [Slides](lectures/rel-alg/db-relalg-slides.pdf)
+: **Reading**{: .label .label-reading} FCDS 2.4
 
 Mon, Jan 29
 : **Relational algebra, continued**
 : **Project**{: .label .label-proj} [Milestone 1](project/milestone1), due Wed, Feb 7
 
 Wed, Jan 31
-: **SQL**
+: **SQL**  
+  [Database setup instructions](lectures/sql/hp-database-setup.pdf)
 : **Homework**{: .label .label-hw} [Homework 1](homework/hw1/hw1.pdf), due Mon, Feb 5
-: **Reading**{: .label .label-reading} FCDS 6.2
-
+: **Reading**{: .label .label-reading} FCDS 6.1, 6.2
