@@ -29,6 +29,16 @@ Mon, Jan 29
 
 Wed, Jan 31
 : **SQL**  
-  [Database setup instructions](lectures/sql/hp-database-setup.pdf)
+  [Database setup instructions](lectures/sql/hp-database-setup.pdf) 
 : **Homework**{: .label .label-hw} [Homework 1](homework/hw1/hw1.pdf), due Mon, Feb 5
-: **Reading**{: .label .label-reading} FCDS 6.1, 6.2
+: **Reading**{: .label .label-reading} FCDS 6.1
+
+Mon, Feb 5
+: **SQL II**  
+  [Queries](lectures/sql/queries1.txt)
+: **Reading**{: .label .label-reading} FCDS 6.2
+
+Wed, Feb 7
+: **SQL III**  
+: **Reading**{: .label .label-reading} FCDS 6.3
+

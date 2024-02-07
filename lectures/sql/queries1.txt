@@ -1,0 +1,23 @@
+--select * from profs where plast like '%-%';
+--select room from rooms where maxseats >= 10;
+--select distinct slast from grades where grade<1 order by slast
+--select * from students;
+--select * from students s1, students s2 where s1.house='Gryffindor'
+--  and s2.house='Slytherin'
+--select * from students s1 JOIN students s2 ON s1.house='Gryffindor'
+--  and s2.house='Slytherin'
+--select students.slast, sfirst, crn, grade from grades join students 
+--  on grades.slast=students.slast;
+--select * from students join grades on slast
+--select * from grades natural join students natural join courses
+--select * from courses c1 join courses c2 on
+--  c1.room = c2.room and c1.starttime = c2.starttime and c1.year = c2.year
+--  and c1.name != c2.name and c1.crn < c2.crn
+--select slast,crn,name,plast from heads natural join courses natural join students 
+--  natural join grades
+--select * from grades natural join students natural join courses
+---  join heads on students.house = heads.house and 
+-- courses.plast <> heads.plast
+select * from students s1 natural join grades g1 
+    join students s2 natural join grades g2
+	on g1.grade > 2 and g2.grade <= 1 and g1.crn=g2.crn
