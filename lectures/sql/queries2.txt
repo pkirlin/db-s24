@@ -1,0 +1,43 @@
+--(select slast from students) INTERSECT (select plast from profs)
+
+--select slast from grades where crn=1 intersect
+--select slast from grades where crn=2
+
+--select plast from profs except
+--select distinct plast from courses where starttime=9
+
+--select name, year, plast from courses natural join rooms where maxseats >= 10
+
+--select plast from courses except
+--select c1.plast from courses c1 join courses c2 ON
+--   c1.plast = c2.plast and c1.name != c2.name
+
+-- NESTED SUBQUERIES
+
+--select house from students where slast='Patil'
+--select * from heads where house='Ravenclaw'
+
+--select * from heads 
+--  where house=(select house from students where slast='Patil')
+
+--select * from students natural join heads where slast='Patil'
+
+--select room from courses where crn=42
+--select * from courses where room=(select room from courses where crn=42)
+
+--select * from courses natural join heads
+
+--select plast from heads;
+--select * from courses where plast NOT IN (select plast from heads)
+
+--select starttime from grades natural join courses where slast='Potter'
+--   and year=1996
+
+--select * from courses where year=1996 and starttime NOT IN
+--  (select starttime from grades natural join courses where slast='Potter'
+--   and year=1996)
+
+--select year from courses where plast='Hagrid' and name like 'Care%'
+
+select * from courses where name like 'Care%' and 
+  year < all (select year from courses where plast='Hagrid' and name like 'Care%')

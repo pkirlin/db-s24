@@ -40,5 +40,6 @@ Mon, Feb 5
 
 Wed, Feb 7
 : **SQL III**  
+  [Queries](lectures/sql/queries2.txt)
 : **Reading**{: .label .label-reading} FCDS 6.3
 
