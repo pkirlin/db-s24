@@ -39,7 +39,13 @@ Mon, Feb 5
 : **Reading**{: .label .label-reading} FCDS 6.2
 
 Wed, Feb 7
-: **SQL III**  
+: **SQL III (subqueries)**  
   [Queries](lectures/sql/queries2.txt)
 : **Reading**{: .label .label-reading} FCDS 6.3
+
+Mon, Feb 12
+: **SQL IV (aggregation and grouping)**  
+  [Queries](lectures/sql/queries3.txt)
+: **Homework**{: .label .label-hw} [Homework 2](homework/hw2/), due Mon, Feb 19
+: **Reading**{: .label .label-reading} FCDS 6.4
 

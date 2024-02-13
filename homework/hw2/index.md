@@ -7,7 +7,9 @@ nav_exclude: true
 *To receive full credit for this assignment, all your writing should be legible and all pages you submit should be stapled together. You may, of course, type your responses if you'd like.*
 
 ## Connecting to the database
-For this homework, you will use a database of flight information.  To access the database, use pgAdmin to connect to database.rhodescs.org, as we've been doing in class to access the Harry Potter database.  **However**, you must connect with a different username and password.  Your username is your standard Rhodes username (like your email, minus the `@rhodes.edu` part), and your password is the same as your username.  We changed this in class, but you may have missed it if you were absent or didn't have your laptop that day.
+For this homework, you will use a database of flight information.  To access the database, use pgAdmin to connect to dbclass.rhodescs.org, as we've been 
+doing 
+in class to access the Harry Potter database.  **However**, you must connect with a different username and password.  Your username is your standard Rhodes username (like your email, minus the `@rhodes.edu` part), and your password is the same as your username.
 
 Once connected, look for the **flights** database.  The tables are as follows:
 * **customers(customerID, first, last, city, state, birthday)**
