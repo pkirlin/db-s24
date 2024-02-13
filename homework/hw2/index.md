@@ -78,7 +78,9 @@ the previous two questions did not make this distinction.)
         
     Hint: this is hard. You may want to use more views. 
 
-    Hint 2: You may find it useful as well to read the book section on correlated subqueries.  [This may be helpful as well.](http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/) This question can be solved with correlated subqueries or joining a table to itself.
+    Hint 2: You may find it useful as well to read the book section on correlated subqueries.  [This may be helpful as 
+well.](https://web.archive.org/web/20061213215921/http://www.xaprb.com/blog/2006/12/07/how-to-select-the-firstleastmax-row-per-group-in-sql/) This 
+question can be solved with correlated subqueries or joining a table to itself.
         
     Hint 3: You should end up with a 12-row table. [Sanity check: You should end up with the most popular Delta (DL) route being from Minneapolis/St. Paul (MSP) to Salt Lake City (SLC), carrying 572 passengers in total.
         
