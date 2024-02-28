@@ -56,7 +56,8 @@ You will construct E/R diagrams for three different situations, plus correspondi
     -   Each restaurant has a name and mailing address.
     -   The name of a restaurant may not be unique, but the mailing address is unique.
     -   Each dish (item on the menu at a restaurant) has a name and price.
-    -   The price of a dish might differ at different restaurants. For example, the pulled pork sandwich at Central BBQ might be $7.99, but at the Barbecue Shop the same sandwich might be $6.99.
+    -   The price of a dish might differ at different restaurants. For example, the pulled pork sandwich at Central BBQ 
+might be $8.99, but at the Barbecue Shop the same sandwich might be $7.99.
     -   The name of a dish is unique within a restaurant, but multiple restaurants may have dishes with the same name (e.g., "pulled pork sandwich").
     -   Each dish is offered by at least one restaurant, and each restaurant offers at least one dish.
     -   Students assign ratings (1 to 5 stars) to a specific dish at a specific restaurant. Each student may rate each (dish, restaurant) pair only once, but may rate multiple dishes at a single restaurant, or the same dish at different restaurants.

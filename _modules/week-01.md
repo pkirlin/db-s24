@@ -49,3 +49,23 @@ Mon, Feb 12
 : **Homework**{: .label .label-hw} [Homework 2](homework/hw2/), due Mon, Feb 19
 : **Reading**{: .label .label-reading} FCDS 6.4
 
+Wed, Feb 14
+: **SQL create/update**
+
+Mon, Feb 19
+: **E/R diagrams**
+: [Slides](lectures/er/er-modeling.pdf)
+
+Wed, Feb 21
+: **E/R diagrams**
+: (see above for slides)
+
+Mon, Feb 26
+: **E/R diagrams**
+: (see above for slides)
+: **Homework**{: .label .label-hw} [Homework 3](homework/hw3/), due Mon, Mar 4 **at the beginning of class**
+
+Wed, Feb 28
+: **E/R diagrams**
+: (see above for slides)
+
