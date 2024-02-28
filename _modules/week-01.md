@@ -55,17 +55,21 @@ Wed, Feb 14
 Mon, Feb 19
 : **E/R diagrams**
 : [Slides](lectures/er/er-modeling.pdf)
+: **Reading**{: .label .label-reading} FCDS 4.1
 
 Wed, Feb 21
 : **E/R diagrams**
 : (see above for slides)
+: **Reading**{: .label .label-reading} FCDS 4.1-4.3
 
 Mon, Feb 26
 : **E/R diagrams**
 : (see above for slides)
 : **Homework**{: .label .label-hw} [Homework 3](homework/hw3/), due Mon, Mar 4 **at the beginning of class**
+: **Reading**{: .label .label-reading} FCDS 4.4
 
 Wed, Feb 28
 : **E/R diagrams**
 : (see above for slides)
+: **Reading**{: .label .label-reading} FCDS 4.5
 
