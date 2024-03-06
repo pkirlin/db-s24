@@ -1,0 +1,67 @@
+--Who is the head of Padma Patil's house?
+--select house from students where slast='Patil'
+--select plast from heads 
+--    where house=(select house from students where slast='Patil')
+
+--Find all classes taught in the same room as CRN 42.
+--select  room from courses where crn=42;
+--select * from courses 
+--  where room=(select  room from courses where crn=42)
+
+-- Get all the classes taught by a head of a house.
+--select plast from heads
+
+--select * from courses where plast NOT IN (select plast from heads)
+
+--Find me all courses in 1996 that Harry Potter could take
+--that don't conflict with a class he's already in.
+
+--select starttime from grades natural join courses 
+--  where slast='Potter' and year=1996
+
+--select * from courses 
+--  where starttime NOT IN 
+--     (select starttime from grades natural join courses 
+--	     where slast='Potter' and year=1996) AND year = 1996
+		 
+-- Get me a list of all Care of Magical Creatures courses
+-- taught in years before Hagrid starting teaching the course.
+--select year from courses 
+--  where name = 'Care of Magical Creatures' and plast='Hagrid' 
+  
+--select * from courses 
+--  where name = 'Care of Magical Creatures' and 
+--  year < ALL (select year from courses 
+--                where name = 'Care of Magical Creatures' 
+--			     and plast='Hagrid')
+
+-- Correlated subqueries
+-- Names of students who have a unique pet in their house.
+--select * from students s1 where pet NOT IN
+--  (select pet from students s2 
+--      where s2.house=s1.house and s2.slast!=s1.slast)
+
+-- Grouping and aggregation
+--Find how many total classes Harry Potter has taken.
+--select count(distinct name) from grades natural join courses where slast='Potter'
+
+-- average gpa for each student
+--select slast, avg(grade) from grades group by slast
+-- how many courses are offered each year?
+--select year, count(*) from courses group by year
+-- Find me Harry Potter's GPA by year
+--select year, avg(grade) from grades natural join courses 
+--   where slast='Potter' group by year
+---- Find me Harry Potter's GPA by year leaving out courses he failed
+--select year, avg(grade) from grades natural join courses 
+--   where slast='Potter' and grade > 0 group by year
+
+-- Find me a list of professors, and the number of courses each
+--    professor has ever taught.
+select plast, count(distinct name) from courses group by plast
+-- List of every CRN and the number of people enrolled in that CRN.
+-- A list of all courses and the number of times they've been taught.
+--     ("course" here means the name of a course)
+-- List of every CRN and the number of people enrolled in that CRN *plus*
+      --the course name.
+
