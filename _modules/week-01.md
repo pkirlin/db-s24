@@ -73,3 +73,51 @@ Wed, Feb 28
 : (see above for slides)
 : **Reading**{: .label .label-reading} FCDS 4.5
 
+Mon, Mar 4
+: **Midterm review**
+
+Wed, Mar 6
+: **Midterm**
+
+Mon, Mar 11
+: **Spring break**
+
+Wed, Mar 13
+: **Spring break**
+
+Mon, Mar 18
+: **HTML lab**
+
+Wed, Mar 20
+: **Flask 1**
+
+Mon, Mar 25
+: **Flask 2**
+
+Wed, Mar 27
+: **Flask 3**
+
+Mon, Apr 1
+: **Functional dependencies**
+
+Wed, Apr 3
+: **Functional dependencies**
+
+Mon, Apr 8
+: **BCNF and normalization**
+
+Wed, Apr 10
+: **Indices, B-trees**
+
+Mon, Apr 15
+: **Query optimization**
+
+Wed, Apr 17
+: **Transactions**
+
+Mon, Apr 22
+: **Catchup**
+
+Wed, Apr 24
+: **Project presentations**
+
