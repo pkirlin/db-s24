@@ -86,7 +86,8 @@ Wed, Mar 13
 : **Spring break**
 
 Mon, Mar 18
-: **HTML lab**
+: **HTML lab**  
+: [Lab](labs/html)
 
 Wed, Mar 20
 : **Flask 1**
