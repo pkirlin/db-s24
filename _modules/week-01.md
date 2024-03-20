@@ -90,13 +90,14 @@ Mon, Mar 18
 : [Lab](labs/html)
 
 Wed, Mar 20
-: **Flask 1**
+: **Interacting with a database through Python**
+: [Get replit code](https://replit.com/@phillipkirlin/pg-python-lab-2024-starter)
 
 Mon, Mar 25
-: **Flask 2**
+: **Flask 1**
 
 Wed, Mar 27
-: **Flask 3**
+: **Flask 2**
 
 Mon, Apr 1
 : **Functional dependencies**
