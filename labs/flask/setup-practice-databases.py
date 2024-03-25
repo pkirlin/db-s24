@@ -22,7 +22,7 @@ conn = psycopg2.connect(host="dbclass.rhodescs.org", user="kirlinp", password="k
 cur = conn.cursor()
 
 logins = ["sample"]
-file = open("logins.txt")
+file = open("logins2.txt")
 logins = [line.strip() for line in file.readlines()]
 
 for username in logins:

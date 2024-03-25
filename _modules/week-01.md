@@ -95,6 +95,9 @@ Wed, Mar 20
 
 Mon, Mar 25
 : **Flask 1**
+: [Get replit code (finishing previous lab)](https://replit.com/@phillipkirlin/pg-python-lab-2024-starter2)
+: [Get replit code (Flask lab)](https://replit.com/@phillipkirlin/flask-lab-2024-starter)
+: [Flask lab instructions](https://github.com/pkirlin/lab-flask/wiki)
 
 Wed, Mar 27
 : **Flask 2**

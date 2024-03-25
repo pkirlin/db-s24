@@ -2,7 +2,7 @@
 
 import sys
 
-file = open("logins.txt", "r")
+file = open("logins2.txt", "r")
 
 for line in file:
 	username = line.strip()

@@ -1,0 +1,49 @@
+import psycopg2
+import psycopg2.extras
+
+DBUSER = "sample"
+DBPASS = "sample"
+
+conn = psycopg2.connect(host="dbclass.rhodescs.org", user=DBUSER, password=DBPASS, dbname="practice")
+cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+def get_users():
+    cur.execute("SELECT * FROM users")
+    rows = cur.fetchall()
+    return rows
+
+def main():
+    users = get_users()
+    print("Users: ")
+    for user in users:
+        print(user['userid'], user['firstname'], user['lastname'])
+
+    chosen_user = int(input("Enter a user id: "))
+
+    print("\nHere is their schedule:")
+    cur.execute("SELECT * FROM enroll NATURAL JOIN classes WHERE userid=%s", [chosen_user])
+
+    user_classes = cur.fetchall()
+    print(user_classes)
+
+    print("\nHere are the times they are already enrolled in a class:")
+    cur.execute("SELECT classtime FROM enroll NATURAL JOIN classes WHERE userid=%s", [chosen_user])
+    print(cur.fetchall())
+
+    print("Pick a new class for them to enroll in:")
+    cur.execute("SELECT * FROM classes where classtime not in "
+               "(SELECT classtime FROM enroll NATURAL JOIN classes WHERE userid=%s)", [chosen_user])
+    
+    classes = cur.fetchall()
+    
+    print("\nClasses: ")
+    for cl in classes:
+        print(cl['classid'], cl['classnumber'], cl['classname'], cl['classtime'], cl['profname'])
+
+    chosen_class = int(input("Enter a class id: "))
+
+    cur.execute("INSERT INTO enroll (userid, classid) VALUES (%s, %s)", [chosen_user, chosen_class])
+    conn.commit()
+    
+
+main()

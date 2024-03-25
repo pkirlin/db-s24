@@ -24,3 +24,4 @@ sulck-25
 tanmo-25
 vegma-24
 zhadi-25
+sample
