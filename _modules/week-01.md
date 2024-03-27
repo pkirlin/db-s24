@@ -101,6 +101,8 @@ Mon, Mar 25
 
 Wed, Mar 27
 : **Flask 2**
+: [Get replit code (Flask lab)](https://replit.com/@phillipkirlin/flask-lab-databases-2024-starter)
+: [Flask lab instructions](https://github.com/pkirlin/lab-flask/wiki) 
 
 Mon, Apr 1
 : **Functional dependencies**
