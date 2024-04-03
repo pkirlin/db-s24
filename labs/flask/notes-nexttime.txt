@@ -1,0 +1,1 @@
+in labs, always call the main route /homepage rather than /index
