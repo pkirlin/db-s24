@@ -105,10 +105,12 @@ Wed, Mar 27
 : [Flask lab instructions](https://github.com/pkirlin/lab-flask/wiki) 
 
 Mon, Apr 1
-: **Functional dependencies**
+: **Functional dependencies**  
+  [Slides](lectures/fd/func-deps1.pdf)
 
 Wed, Apr 3
-: **Functional dependencies**
+: **Functional dependencies**  
+  [Slides](lectures/fd/func-deps1.pdf)
 
 Mon, Apr 8
 : **BCNF and normalization**
