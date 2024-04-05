@@ -113,19 +113,19 @@ Wed, Apr 3
   [Slides](lectures/fd/func-deps1.pdf)
 
 Mon, Apr 8
-: **BCNF and normalization**
+: **No class, go see the eclipse!**
 
 Wed, Apr 10
-: **Indices, B-trees**
+: **BCNF and normalization**
 
 Mon, Apr 15
-: **Query optimization**
+: **Indices, B-trees**
 
 Wed, Apr 17
-: **Transactions**
+: **Query optimization**
 
 Mon, Apr 22
-: **Catchup**
+: **Transactions**
 
 Wed, Apr 24
 : **Project presentations**
