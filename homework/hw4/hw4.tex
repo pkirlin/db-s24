@@ -84,31 +84,7 @@
 		\item Are any of the relations in your final decomposition not in BCNF?  If yes, decompose them into BCNF.
 	\end{enumerate}
 	
-	\item Consider the following relation (similar to the movie database in the textbook):
-
-StarringMovie(actorName, actorAddress, studioName, studioAddress, title, year, budget, role, wage)
-
-Consider the following constraints for this relation: 
-
-Constraint 1:	Every actor has a unique name and address. 
-
-Constraint 2:	Every studio has a unique name and  address. 
-
-Constraint 3:	Every movie has a release year, budget and a unique movie name, and it is owned by only one studio. 
-
-Constraint 4:	An actor can play multiple \emph{different} roles in the same movie. For example, an actor can play the roles of ``Teacher'' and ``Policeman,'' but cannot play two ``Students'' in a movie.  Multiple actors can play the same role in the same movie (so it is possible that there may be many actors playing the role of ``Student'' in a movie.). 
-
-Constraint 5:	If multiple actors play the same role in the same movie, they must all get the same wage. For example, all ``Students'' in the same movie should get the same daily wage.  Note that if someone plays a ``Student'' in two different movies, they may get different daily wages for each of those jobs. Also, if different actors play different roles in the same movie, they may get different wages, e.g., someone playing a ``Teacher'' may get more or less money than someone playing a ``Student'' in the same movie.  Someone
-playing multiple roles in the same movie will have multiple wages listed, one for each role.
-
-\begin{enumerate}
-\item Based on the statements, list all the non-trivial functional dependencies for this schema.  For each FD you write, list the statement number(s) from which you derived that FD.
-A minimal basis of FDs is fine.
-
-
-\item Is StarringMovie in BCNF?  If not, convert it to BCNF.  Show your work.
-\end{enumerate}
-
+	
 \end{enumerate}
 
 \end{document}

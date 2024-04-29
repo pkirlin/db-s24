@@ -116,17 +116,23 @@ Mon, Apr 8
 : **No class, go see the eclipse!**
 
 Wed, Apr 10
-: **BCNF and normalization**
+: **BCNF and normalization**  
+  [Slides](lectures/fd/func-deps1.pdf)
 
 Mon, Apr 15
-: **Indices, B-trees**
+: **BCNF and normalization**  
+  [Slides](lectures/fd/func-deps1.pdf)
 
 Wed, Apr 17
-: **Query optimization**
+: **Indices, B-Trees**  
+: [Slides](lectures/indices/indexes-slides.pdf)
+: [Handout](lectures/indices/btrees-handout.pdf)
+: **Homework**{: .label .label-hw} [Homework 4](homework/hw4/hw4.pdf), due Fri, Apr 26 
 
 Mon, Apr 22
-: **Transactions**
+: **Review**
 
 Wed, Apr 24
 : **Project presentations**
+
 
